@@ -1,0 +1,786 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+main {
+  display: block;
+}
+
+header .logo {
+  height: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.mainBox .prize {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+}
+html body header {
+  width: 100%;
+  height: 82px;
+}
+html body header article {
+  width: 1366px;
+  height: 100%;
+  padding: 0 53px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body header article .topList {
+  width: 950px;
+  height: 45px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+html body header article .topList li {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+html body header article .topList li:hover, html body header article .topList li:active, html body header article .topList li.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7b000c), to(#a30220));
+  background: linear-gradient(to bottom, #7b000c 0%, #a30220 100%);
+}
+html body header article .topList li p {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-right: solid 1px #e3aa57;
+  padding: 0 15px;
+}
+html body .home {
+  width: 100%;
+  height: auto;
+}
+html body .home article {
+  width: 1366px;
+  height: auto;
+  padding: 0 33px 30px;
+  margin: 0 auto;
+}
+html body .home article .content {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background: #e6e6e6;
+  border: solid 1px #ffffff;
+  -webkit-box-shadow: 0 0 8px 1px #0000002a inset;
+          box-shadow: 0 0 8px 1px #0000002a inset;
+}
+html body .home article .content .marqueeBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .home article .content .marqueeBox .title {
+  color: #454545;
+  font-size: 16px;
+  font-weight: bold;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 15px;
+}
+html body .home article .content .marqueeBox .marquee {
+  width: 100%;
+  height: 35px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  border: solid 1px #c59248;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+html body .home article .content .marqueeBox .marquee p {
+  display: inline-block;
+  color: #242424;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 100%;
+  white-space: nowrap;
+  -webkit-animation: marquee 10s linear 0s infinite;
+          animation: marquee 10s linear 0s infinite;
+}
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+html body .home article .content .mainWrap {
+  width: 100%;
+  height: auto;
+  border: solid 1px #c59248;
+  margin-top: 15px;
+}
+html body .home article .content .mainWrap .top {
+  width: 100%;
+  height: 45px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  border-bottom: solid 1px #c59248;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .home article .content .mainWrap .top div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .top div.left {
+  width: 310px;
+  height: 100%;
+  border-right: solid 1px #c59248;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .home article .content .mainWrap .top div.left p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+html body .home article .content .mainWrap .top div.right button {
+  width: 76px;
+  height: 27px;
+  background: none;
+  border: solid 1px #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+html body .home article .content .mainWrap .top div.right button:hover, html body .home article .content .mainWrap .top div.right button:active, html body .home article .content .mainWrap .top div.right button.active {
+  background: #ffffff;
+  border-color: #bb0023;
+  color: #272727;
+}
+html body .home article .content .mainWrap .mainBox {
+  width: 100%;
+  height: auto;
+  background: #f5f5f5;
+  -webkit-box-shadow: 0 2px 8px 0 #0000002a;
+          box-shadow: 0 2px 8px 0 #0000002a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .home article .content .mainWrap .mainBox .left {
+  width: 310px;
+  height: auto;
+  border-right: solid 1px #c59248;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .home article .content .mainWrap .mainBox .left .account {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 1px #c59248;
+}
+html body .home article .content .mainWrap .mainBox .left .account p {
+  width: 110px;
+  height: 27px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  color: #1c1c1c;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .left .account i {
+  display: block;
+  width: 2px;
+  height: 27px;
+  background: #c59248;
+  margin: 0 10px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox {
+  width: 100%;
+  height: auto;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea {
+  width: 100%;
+  height: auto;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow {
+  width: 100%;
+  height: auto;
+  border-top: solid 1px #c59248;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .title {
+  width: 100%;
+  height: 28px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
+  background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .title p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul {
+  width: 100%;
+  height: auto;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li {
+  width: 100%;
+  height: 26px;
+  background: #ededed;
+  border-bottom: solid 1px #888888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li:nth-of-type(2n) {
+  background: #f7f7f7;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p.smallTitle {
+  width: 116px;
+  background: #dddddd;
+  border-right: solid 1px #888888;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p.smallTitle.short {
+  width: 80px;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p input {
+  width: 88px;
+  height: 20px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p input.active {
+  background: #ffffff;
+  border: solid 1px #755316;
+  pointer-events: visible;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox {
+  width: 100%;
+  height: 67px;
+  background: #ededed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox .nextBtn {
+  width: 132px;
+  height: 47px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to top, #dbc9a7 0%, #ffedbe 100%);
+  border-radius: 5px;
+  border: solid 1px #b5a484;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox .nextBtn:hover, html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox .nextBtn:active, html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox .nextBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox button:not(.nextBtn) {
+  width: auto;
+  height: 35px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to top, #e0e0e0 0%, #ffffff 54%);
+  border-radius: 5px;
+  border: solid 1px #9c8966;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px;
+  margin: 0 3px;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox button:not(.nextBtn):hover, html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox button:not(.nextBtn):active, html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .btnBox button:not(.nextBtn).active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 54%);
+}
+html body .home article .content .mainWrap .mainBox .right {
+  width: 100%;
+  height: auto;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #c59248;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea {
+  width: 220px;
+  height: auto;
+  background: #ededed;
+  border-right: solid 1px #c59248;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .change {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .change button {
+  width: 140px;
+  height: 40px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to top, #dbc9a7 0%, #ffedbe 100%);
+  border-radius: 5px;
+  border: solid 1px #b5a484;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .change button:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .change button:active, html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .change button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox {
+  width: 100%;
+  height: auto;
+  border-top: solid 1px #c59248;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .title {
+  width: 100%;
+  height: 28px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
+  background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .title p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box .numTitle {
+  color: #272727;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box input {
+  width: 88px;
+  height: 30px;
+  background: #ffffff;
+  border: solid 1px #755316;
+  border-radius: 5px;
+  text-align: center;
+  color: #000000;
+  font-style: 14px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 {
+  width: 100%;
+  height: auto;
+  padding: 20px 10px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more {
+  margin: 0;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button {
+  border-bottom: none;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button:nth-of-type(1) {
+  border-radius: 5px 0 0 0;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button:last-child {
+  border-radius: 0 5px 0 0;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:last-child button:nth-of-type(1) {
+  border-radius: 0 0 0 5px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:last-child button:last-child {
+  border-radius: 0 0 5px 0;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button {
+  width: 20%;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button {
+  width: 25%;
+  height: 26px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to top, #e0e0e0 0%, #ffffff 54%);
+  border-radius: 5px;
+  border: solid 1px #9c8966;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px;
+  border-radius: 0;
+  border-right-width: 0;
+  color: #0325f2;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button:active, html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 54%);
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button:nth-of-type(1) {
+  border-radius: 5px 0 0 5px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button:last-child {
+  border-radius: 0 5px 5px 0;
+  border-right-width: 1px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .bigBox .smallTitle {
+  width: 100%;
+  color: #272727;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap {
+  width: auto;
+  height: auto;
+  border-right: solid 1px #c59248;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .title {
+  width: auto;
+  height: 28px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
+  background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .title p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox {
+  width: 260px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li {
+  width: 25%;
+  height: auto;
+  border-right: solid 1px #888888;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li:last-child {
+  border: none;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button {
+  width: 100%;
+  height: 44px;
+  background: #f3f3f3;
+  border-bottom: solid 1px #888888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.active {
+  background: #9e021e;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:last-child {
+  border: none;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear {
+  background: #393433;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i {
+  width: 22px;
+  height: 22px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to top, #e0e0e0 0%, #ffffff 54%);
+  border: solid 1px #755316;
+  border-radius: 3px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::before, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: #d90000;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), color-stop(54%, #ffffff));
+  background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 54%);
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button p {
+  width: 35px;
+  height: 35px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffd617), to(#c69e00));
+  background: linear-gradient(to bottom, #ffd617 30%, #c69e00 100%);
+  border-radius: 50%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2px;
+}

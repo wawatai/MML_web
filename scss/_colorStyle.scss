@@ -1,0 +1,163 @@
+//BG
+$BG: #eaeaea;
+
+//主框線
+$mainBorder_1: #c59248;
+
+
+//個別區塊設定
+
+
+//header
+$header_TopList_BG: linear-gradient(to top,#7b000c 0%,#a30220 100%);
+$header_TopList_Hover: linear-gradient(to bottom,#7b000c 0%,#a30220 100%);
+$header_TopList_Word: #ffffff;
+$header_TopList_Border: #e3aa57;
+
+//home
+$home_BG: #e6e6e6;
+$home_innerBG: #f5f5f5;
+$home_OuterBorder: #ffffff;
+$home_Shadow: #0000002a;
+$home_TitleBG: linear-gradient(to top,#9e7b48 6%,#d2ae69 100%);
+$home_Title: #ffffff;
+$home_Word: #000000;
+$home_Word_2: #272727;
+
+$home_Account_WordBG: #d9d9d9;
+$home_Account_Word: #1c1c1c;
+
+$home_innerArea_BG: #ededed;
+$home_innerArea_SecondBG: #f7f7f7;
+$home_innerArea_ListBorder: #888888;
+$home_innerArea_SmallTitleBG: #dddddd;
+$home_innerArea_ChooseBG: #f3f3f3;
+$home_innerArea_ChooseBG_2: #9e021e;
+$home_innerArea_ClearBG: #393433;
+
+//marquee
+$marquee_Title: #454545;
+$marquee_BG: #f5f5f5;
+$marquee_Border: #c59248;
+$marquee_Word: #242424;
+
+
+//button
+
+
+//單碰連碰按鈕
+@mixin borderBtn {
+    background: none;
+    border: solid 1px #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #ffffff;
+        border-color: #bb0023;
+        color: #272727;
+    }
+}
+//淺黃漸層按鈕
+@mixin yellowBtn {
+    background: linear-gradient(to top,#dbc9a7 0%,#ffedbe 100%);
+    border-radius: 5px;
+    border: solid 1px #b5a484;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#dbc9a7 0%,#ffedbe 100%);
+    }
+}
+//白漸層按鈕
+@mixin whiteBtn {
+    background: linear-gradient(to top,#e0e0e0 0%,#ffffff 54%);
+    border-radius: 5px;
+    border: solid 1px #9c8966;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#e0e0e0 0%,#ffffff 54%);
+    }
+}
+$whiteBtn_Color2: #0325f2;
+//彩球按鈕
+@mixin ballBtn {
+    background: linear-gradient(to bottom,#ffd617 30%,#c69e00 100%);
+    border-radius: 50%;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+}
+//清除按鈕
+@mixin clearBtn {
+    background: linear-gradient(to top,#e0e0e0 0%,#ffffff 54%);
+    border: solid 1px #755316;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 15px;
+        background: #d90000;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#e0e0e0 0%,#ffffff 54%);
+    }
+}
+
+
+//input
+
+
+//betAreaInput
+@mixin betInput {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+
+    &.active {
+        background: #ffffff;
+        border: solid 1px #755316;
+        pointer-events: visible;
+    }
+}
+//fastAreaInput
+@mixin fastInput {
+    background: #ffffff;
+    border: solid 1px #755316;
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+    font-style: 14px;
+    font-weight: bold;
+}
