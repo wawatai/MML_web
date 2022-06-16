@@ -29,6 +29,7 @@ $home_Account_Word: #1c1c1c;
 
 $home_innerArea_BG: #ededed;
 $home_innerArea_SecondBG: #f7f7f7;
+$home_innerArea_ThirdBG: #fbbd00;
 $home_innerArea_ListBorder: #888888;
 $home_innerArea_SmallTitleBG: #dddddd;
 $home_innerArea_ChooseBG: #f3f3f3;
@@ -99,6 +100,7 @@ $whiteBtn_Color2: #0325f2;
     align-items: center;
     justify-content: center;
     padding-bottom: 2px;
+    user-select: none;
 }
 //清除按鈕
 @mixin clearBtn {
@@ -158,6 +160,6 @@ $whiteBtn_Color2: #0325f2;
     border-radius: 5px;
     text-align: center;
     color: #000000;
-    font-style: 14px;
+    font-size: 14px;
     font-weight: bold;
 }

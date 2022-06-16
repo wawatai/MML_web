@@ -358,6 +358,9 @@ html body .home article .content .mainWrap .mainBox .left .betArea .betWindow {
   height: auto;
   border-top: solid 1px #c59248;
 }
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow.moneyWindow.active .num {
+  background: #fbbd00;
+}
 html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .title {
   width: 100%;
   height: 28px;
@@ -583,7 +586,7 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .f
   border-radius: 5px;
   text-align: center;
   color: #000000;
-  font-style: 14px;
+  font-size: 14px;
   font-weight: bold;
   margin-left: 8px;
 }
@@ -601,25 +604,30 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .f
   margin-bottom: 20px;
 }
 html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
   margin: 0;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button {
-  border-bottom: none;
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button {
+  width: auto;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button:nth-of-type(1) {
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button:nth-of-type(1) {
   border-radius: 5px 0 0 0;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:nth-of-type(1) button:last-child {
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button:nth-of-type(5) {
   border-radius: 0 5px 0 0;
+  border-right-width: 1px;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:last-child button:nth-of-type(1) {
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button:nth-of-type(-n+5) {
+  border-bottom: none;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button:nth-of-type(6) {
   border-radius: 0 0 0 5px;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more:last-child button:last-child {
+html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button:nth-of-type(10) {
   border-radius: 0 0 5px 0;
-}
-html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox.more button {
-  width: 20%;
 }
 html body .home article .content .mainWrap .mainBox .right .flexBox .fastArea .fastBox .box2 .btnBox button {
   width: 25%;
@@ -703,7 +711,7 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea 
 html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li:last-child {
   border: none;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label {
   width: 100%;
   height: 44px;
   background: #f3f3f3;
@@ -717,17 +725,18 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.active {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.active {
   background: #9e021e;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button:last-child {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label:last-child {
   border: none;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear {
   background: #393433;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i {
   width: 22px;
   height: 22px;
   background: -webkit-gradient(linear, left bottom, left top, from(#e0e0e0), color-stop(54%, #ffffff));
@@ -745,26 +754,26 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea 
       -ms-flex-pack: center;
           justify-content: center;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::before, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::after {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i::before, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i::after {
   content: "";
   position: absolute;
   width: 2px;
   height: 15px;
   background: #d90000;
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::before {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i::after {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button.clear i.active {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i:hover, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i:active, html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label.clear i.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), color-stop(54%, #ffffff));
   background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 54%);
 }
-html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li button p {
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label p {
   width: 35px;
   height: 35px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffd617), to(#c69e00));
@@ -783,4 +792,12 @@ html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea 
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+html body .home article .content .mainWrap .mainBox .right .flexBox .chooseArea .contiWrap .btnBox li label input {
+  position: absolute;
+  z-index: -1;
 }

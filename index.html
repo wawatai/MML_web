@@ -122,29 +122,33 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="betWindow">
+                                <div class="betWindow moneyWindow">
                                     <div class="title">
                                         <p>星碰</p>
                                     </div>
                                     <ul>
                                         <li>
                                             <p class="smallTitle">組數</p>
-                                            <p class="num"></p>
+                                            <p class="num">
+                                                <input type="text" class="permutation">
+                                            </p>
                                         </li>
                                         <li>
                                             <p class="smallTitle">每碰金額</p>
-                                            <p class="num">0</p>
+                                            <p class="num">
+                                                <input type="text" value="0" class="money" oninput="moneyInput()">
+                                            </p>
                                         </li>
                                         <li>
                                             <p class="smallTitle">下注金額</p>
                                             <p class="num">
-                                                <input type="text" value="0">
+                                                <input type="text" value="0" class="total">
                                             </p>
                                         </li>
                                     </ul>
                                     <div class="btnBox">
                                         <button>簡單</button>
-                                        <button>清除</button>
+                                        <button class="clear">清除</button>
                                         <button>送出</button>
                                         <button>常用牌型</button>
                                     </div>
@@ -194,7 +198,7 @@
                                         </div>
                                         <div class="box">
                                             <p class="numTitle">號碼</p>
-                                            <input type="text">
+                                            <input type="text" class="fastInput">
                                         </div>
                                     </div>
                                     <!--快速選號-->
@@ -204,35 +208,33 @@
                                         </div>
                                         <div class="box2">
                                             <div class="btnBox">
-                                                <button>單</button>
-                                                <button>雙</button>
-                                                <button>大</button>
-                                                <button>小</button>
+                                                <button class="odd">單</button>
+                                                <button class="even">雙</button>
+                                                <button class="big">大</button>
+                                                <button class="small">小</button>
                                             </div>
                                             <div class="bigBox">
                                                 <p class="smallTitle">十位數 | 頭數</p>
                                                 <div class="btnBox">
-                                                    <button>0</button>
-                                                    <button>1</button>
-                                                    <button>2</button>
-                                                    <button>3</button>
+                                                    <button class="head">0</button>
+                                                    <button class="head">1</button>
+                                                    <button class="head">2</button>
+                                                    <button class="head">3</button>
                                                 </div>
                                             </div>
                                             <div class="bigBox">
                                                 <p class="smallTitle">個位數 | 尾數</p>
                                                 <div class="btnBox more">
-                                                    <button>0</button>
-                                                    <button>1</button>
-                                                    <button>2</button>
-                                                    <button>3</button>
-                                                    <button>4</button>
-                                                </div>
-                                                <div class="btnBox more">
-                                                    <button>5</button>
-                                                    <button>6</button>
-                                                    <button>7</button>
-                                                    <button>8</button>
-                                                    <button>9</button>
+                                                    <button class="foot">0</button>
+                                                    <button class="foot">1</button>
+                                                    <button class="foot">2</button>
+                                                    <button class="foot">3</button>
+                                                    <button class="foot">4</button>
+                                                    <button class="foot">5</button>
+                                                    <button class="foot">6</button>
+                                                    <button class="foot">7</button>
+                                                    <button class="foot">8</button>
+                                                    <button class="foot">9</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -246,132 +248,171 @@
                                         </div>
                                         <ul class="btnBox">
                                             <li>
-                                                <button>
+                                                <label>
                                                     <p>01</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>02</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>03</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>04</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>05</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>06</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>07</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>08</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>09</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>10</p>
-                                                </button>
+                                                    <input type="checkbox">
+                                                </label>
                                             </li>
                                             <li>
-                                                <button>
+                                                <label>
                                                     <p>11</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>12</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>13</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>14</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>15</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>16</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>17</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>18</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>19</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>20</p>
-                                                </button>
+                                                    <input type="checkbox">
+                                                </label>
                                             </li>
                                             <li>
-                                                <button>
+                                                <label>
                                                     <p>21</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>22</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>23</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>24</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>25</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>26</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>27</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>28</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>29</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>30</p>
-                                                </button>
+                                                    <input type="checkbox">
+                                                </label>
                                             </li>
                                             <li>
-                                                <button>
+                                                <label>
                                                     <p>31</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>32</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>33</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>34</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>35</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>36</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>37</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>38</p>
-                                                </button>
-                                                <button>
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label>
                                                     <p>39</p>
-                                                </button>
-                                                <button class="clear">
+                                                    <input type="checkbox">
+                                                </label>
+                                                <label class="clear">
                                                     <i></i>
-                                                </button>
+                                                </label>
                                             </li>
                                         </ul>
                                     </div>
