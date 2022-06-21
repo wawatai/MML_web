@@ -71,7 +71,7 @@
                 width: 100%;
                 height: auto;
                 border: solid 1px $mainBorder_1;
-                margin-top: 15px;
+                margin-top: 10px;
 
                 //top
                 .top {
@@ -139,7 +139,7 @@
                             justify-content: center;
                             border-bottom: solid 1px $mainBorder_1;
 
-                            p {
+                            div {
                                 width: 110px;
                                 height: 27px;
                                 background: $home_Account_WordBG;
@@ -184,6 +184,13 @@
                                         .num {
                                             background: $home_innerArea_ThirdBG;
                                         }
+
+                                        input {
+
+                                            &.total {
+                                                color: $betInput_ActiveColor;
+                                            }
+                                        }
                                     }
                                 }
 
@@ -220,7 +227,7 @@
                                         p {
                                             width: 100%;
                                             height: 100%;
-                                            color: $home_Word;
+                                            color: $home_innerArea_ListWord;
                                             font-size: 14px;
                                             font-weight: bold;
                                             display: flex;
@@ -242,6 +249,14 @@
                                                 width: 88px;
                                                 height: 20px;
                                                 @include betInput;
+                                                
+                                                &.total {
+                                                    display: none;
+
+                                                    &.display {
+                                                        display: block;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -266,6 +281,16 @@
                                         height: 35px;
                                         @include whiteBtn;
                                         margin: 0 3px;
+
+                                        &.easyBtn,
+                                        &.contiBtn,
+                                        &.common {
+                                            display: none;
+
+                                            &.display {
+                                                display: block;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -276,7 +301,13 @@
                     .right {
                         width: 100%;
                         height: auto;
+                        display: none;
 
+                        &.display {
+                            display: block;
+                        }
+
+                        //連柱碰
                         .flexBox {
                             width: 100%;
                             height: auto;
@@ -335,7 +366,7 @@
                                         justify-content: center;
 
                                         .numTitle {
-                                            color: $home_Word_2;
+                                            color: $mainWord_1;
                                             font-size: 14px;
                                             font-weight: bold;
                                             letter-spacing: 5px;
@@ -409,7 +440,7 @@
 
                                             .smallTitle {
                                                 width: 100%;
-                                                color: $home_Word_2;
+                                                color: $mainWord_1;
                                                 font-size: 14px;
                                                 font-weight: bold;
                                                 text-align: center;
@@ -426,12 +457,14 @@
                                 width: 100%;
                                 height: auto;
                                 display: flex;
+                                background: $home_innerArea_ChooseBaseBG;
 
-                                //連碰
-                                .contiWrap {
+                                //選球區
+                                .ballWrap {
                                     width: auto;
                                     height: auto;
                                     border-right: solid 1px $mainBorder_1;
+                                    flex-shrink: 0;
 
                                     .title {
                                         width: auto;
@@ -499,6 +532,531 @@
                                                 input {
                                                     position: absolute;
                                                     z-index: -1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                //柱碰
+                                .multiWrap {
+                                    width: 100%;
+                                    height: 468px;
+                                    overflow-x: auto;
+
+                                    ul {
+                                        width: auto;
+                                        height: 100%;
+                                        display: flex;
+
+                                        li {
+                                            width: 60px;
+                                            height: 100%;
+                                            background: $home_innerArea_SecondBG;
+                                            border-right: solid 1px $mainBorder_1;
+                                            cursor: pointer;
+
+                                            &:nth-of-type(2n) {
+                                                background: $home_innerArea_BG;
+                                            }
+
+                                            &:hover,&:active,&.active {
+                                                background: $home_innerArea_ChooseBG_2;
+
+                                                .box {
+
+                                                    p {
+                                                        color: $home_innerArea_ChooseWord;
+                                                    }
+                                                }
+                                            }
+
+                                            .title {
+                                                width: 100%;
+                                                height: 28px;
+                                                background: $home_TitleBG;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+        
+                                                p {
+                                                    color: $home_Title;
+                                                    font-size: 14px;
+                                                    font-weight: bold;
+                                                }
+                                            }
+
+                                            .box {
+                                                width: 100%;
+                                                height: calc(100% - 28px);
+                                                overflow-y: auto;
+                                                @include scrollBar;
+
+                                                p {
+                                                    color: $mainWord_1;
+                                                    font-size: 24px;
+                                                    font-weight: bold;
+                                                    text-align: center;
+                                                    line-height: 44px;
+
+                                                    &.count {
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        //單碰
+                        .singleBox {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+
+                            //單碰
+                            .singleWrap {
+                                width: 100%;
+                                height: auto;
+                                background: $home_innerArea_ChooseBG;
+                                border-right: solid 1px $mainBorder_1;
+
+                                .title {
+                                    width: auto;
+                                    height: 28px;
+                                    background: $home_TitleBG;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    p {
+                                        color: $home_Title;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+
+                                //上投注列
+                                .topList {
+                                    width: 100%;
+                                    height: 70px;
+                                    border-bottom: solid 1px $mainBorder_1;
+                                    display: grid;
+                                    grid-template-columns: repeat(7,1fr);
+                                    grid-gap: 0 10px;
+                                    box-sizing: border-box;
+                                    padding: 0 30px;
+
+                                    li {
+                                        width: auto;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-direction: column;
+
+                                        p {
+                                            width: 100%;
+                                            color: $mainWord_1;
+                                            font-style: 14px;
+                                            font-weight: bold;
+                                            margin-bottom: 8px;
+                                            letter-spacing: 5px;
+                                        }
+
+                                        input {
+                                            width: 100%;
+                                            height: 30px;
+                                            @include fastInput;
+                                        }
+                                    }
+                                }
+
+                                //下列單碰
+                                .betBox {
+                                    width: 100%;
+                                    height: auto;
+                                    box-sizing: border-box;
+                                    padding: 10px 30px;
+
+                                    //三按鈕
+                                    .btnBox {
+                                        width: 100%;
+                                        height: auto;
+                                        margin-bottom: 10px;
+                                        display: flex;
+                                        justify-content: center;
+
+                                        button {
+                                            width: auto;
+                                            height: 30px;
+                                            @include whiteBtn;
+                                            margin: 0 5px;
+
+                                            &.forBet,
+                                            &.forTop {
+                                                color: $whiteBtn_Color3;
+                                            }
+                                        }
+                                    }
+
+                                    //單碰列
+                                    .betList {
+                                        width: 100%;
+                                        height: auto;
+                                        border: solid 1px $mainBorder_1;
+
+                                        .smallTitle {
+                                            width: 100%;
+                                            height: 28px;
+                                            display: flex;
+
+                                            p {
+                                                width: 12.5%;
+                                                height: 100%;
+                                                background: $home_Single_TitleBG;
+                                                border-right: solid 1px $mainBorder_1;
+                                                color: $home_Title;
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+
+                                                &:last-child {
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+
+                                        .listBox {
+                                            width: 100%;
+                                            height: auto;
+                                            max-height: 420px;
+                                            overflow-y: auto;
+                                            @include scrollBar;
+
+                                            li {
+                                                width: 100%;
+                                                height: 30px;
+                                                display: flex;
+                                                background: $home_innerArea_BG;
+
+                                                &:nth-of-type(2n) {
+                                                    background: $home_innerArea_SecondBG;
+                                                }
+
+                                                p {
+                                                    width: 12.5%;
+                                                    height: 100%;
+                                                    border-right: solid 1px $home_innerArea_ListBorder;
+                                                    color: $home_innerArea_ListWord;
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+    
+                                                    &:last-child {
+                                                        border: none;
+                                                    }
+
+                                                    &.cancel {
+
+                                                        i {
+                                                            width: 22px;
+                                                            height: 22px;
+                                                            @include clearBtn;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            //提醒字
+                            .remindWord {
+                                width: 86px;
+                                height: 790px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-shrink: 0;
+
+                                p {
+                                    color: $home_innerArea_RemindWord;
+                                    font-size: 30px;
+                                    writing-mode: vertical-lr;
+
+                                    span {
+                                        writing-mode: horizontal-tb;
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        //簡單模式
+                        .easyBox {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            border-bottom: solid 1px $mainBorder_1;
+
+                            //選球區
+                            .leftBox {
+                                width: 50%;
+                                height: auto;
+                                border-right: solid 1px $mainBorder_1;
+
+                                ul {
+                                    width: 100%;
+                                    height: auto;
+
+                                    li {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+
+                                        &:last-child {
+
+                                            label {
+                                                border-bottom: none !important;
+                                            }
+                                        }
+
+                                        &.smallTitle {
+
+                                            label {
+                                                height: 28px;
+                                                background: $home_TitleBG;
+                                                border-width: 0 1px 0 0;
+                                                border-color: $mainBorder_1;
+                                            }
+                                        }
+
+                                        label {
+                                            width: 11%;
+                                            height: 50px;
+                                            background: $home_innerArea_ChooseBG;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-style: solid;
+                                            border-width: 0 1px 1px 0;
+                                            border-color: $home_innerArea_ListBorder;
+                                            cursor: pointer;
+
+                                            &:hover,&:active,&.active {
+                                                background: $home_innerArea_ChooseBG_2;
+                                                
+                                                button {
+                                                    background: none;
+                                                    color: $home_innerArea_ChooseWord;
+                                                }
+                                            }
+
+                                            &:first-child {
+                                                width: 30px;
+                                                flex-shrink: 0;
+                                                background: $home_Easy_TitleBG;
+                                                border-bottom: solid 1px $mainBorder_1;
+                                            }
+
+                                            &:last-child {
+                                                border-right: none;
+                                            }
+
+                                            p {
+                                                color: $home_Title;
+                                                font-size: 16px;
+                                                font-weight: bold;
+                                            }
+
+                                            button {
+                                                width: 35px;
+                                                height: 35px;
+                                                @include ballBtn;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .title {
+                                    width: 100%;
+                                    height: 28px;
+                                    background: $home_TitleBG;
+                                    border-top: solid 1px $mainBorder_1;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    p {
+                                        color: $home_Title;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 5px;
+                                    }
+                                }
+
+                                .inputBox {
+                                    width: 100%;
+                                    height: auto;
+                                    background: $home_innerArea_BG;
+                                    
+                                    div {
+                                        width: 100%;
+                                        height: 54px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        &.boxTop {
+                                            border-bottom: solid 1px $home_innerArea_ListBorder;
+                                            
+                                            .smallTitle {
+                                                color: $mainWord_1;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                letter-spacing: 3px;
+                                            }
+
+                                            input {
+                                                width: 88px;
+                                                height: 30px;
+                                                @include fastInput;
+                                                margin: 0 10px;
+                                            }
+
+                                            p:not(.title) {
+                                                color: $mainWord_1;
+                                                font-size: 14px;
+
+                                                &.smallTitle {
+                                                    font-weight: bold;
+                                                    letter-spacing: 3px;
+                                                }
+                                            }
+                                        }
+
+                                        &.boxBottom {
+                                            display: none;
+
+                                            &.display {
+                                                display: flex;
+                                            }
+                                            
+                                            button {
+                                                width: 105px;
+                                                height: 35px;
+                                                @include whiteBtn;
+                                                margin: 0 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            //球顯示區
+                            .rightBox {
+                                width: 50%;
+                                height: auto;
+                                background: $home_innerArea_ChooseBaseBG;
+                                display: none;
+
+                                &.display {
+                                    display: block;
+                                }
+
+                                .title {
+                                    width: 100%;
+                                    height: 28px;
+                                    background: $home_Single_TitleBG;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    p {
+                                        color: $home_Title;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 5px;
+                                    }
+                                }
+
+                                .num {
+                                    width: 100%;
+                                    height: auto;
+                                    background: $home_innerArea_SecondBG;
+                                    display: grid;
+                                    grid-template-columns: repeat(10,1fr);
+                                    
+                                    p {
+                                        width: auto;
+                                        height: 50px;
+                                        color: $mainWord_1;
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+
+                                ul {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+
+                                    li {
+                                        width: 60px;
+                                        height: 100%;
+                                        background: $home_innerArea_SecondBG;
+                                        border-right: solid 1px $mainBorder_1;
+                                        cursor: pointer;
+
+                                        &:nth-of-type(2n) {
+                                            background: $home_innerArea_BG;
+                                        }
+
+                                        &:hover,&:active,&.active {
+                                            background: $home_innerArea_ChooseBG_2;
+
+                                            .box {
+
+                                                p {
+                                                    color: $home_innerArea_ChooseWord;
+                                                }
+                                            }
+                                        }
+
+                                        .title {
+                                            background: $home_TitleBG;
+    
+                                            p {
+                                                letter-spacing: 0;
+                                            }
+                                        }
+
+                                        .box {
+                                            width: 100%;
+                                            height: calc(100% - 28px);
+                                            overflow-y: auto;
+                                            @include scrollBar;
+
+                                            p {
+                                                color: $mainWord_1;
+                                                font-size: 20px;
+                                                font-weight: bold;
+                                                text-align: center;
+                                                line-height: 50px;
+
+                                                &.count {
+                                                    display: none;
                                                 }
                                             }
                                         }

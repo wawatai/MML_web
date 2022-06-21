@@ -4,6 +4,9 @@ $BG: #eaeaea;
 //主框線
 $mainBorder_1: #c59248;
 
+//主字色
+$mainWord_1: #272727;
+
 
 //個別區塊設定
 
@@ -21,8 +24,6 @@ $home_OuterBorder: #ffffff;
 $home_Shadow: #0000002a;
 $home_TitleBG: linear-gradient(to top,#9e7b48 6%,#d2ae69 100%);
 $home_Title: #ffffff;
-$home_Word: #000000;
-$home_Word_2: #272727;
 
 $home_Account_WordBG: #d9d9d9;
 $home_Account_Word: #1c1c1c;
@@ -31,16 +32,42 @@ $home_innerArea_BG: #ededed;
 $home_innerArea_SecondBG: #f7f7f7;
 $home_innerArea_ThirdBG: #fbbd00;
 $home_innerArea_ListBorder: #888888;
+$home_innerArea_ListWord: #000000;
 $home_innerArea_SmallTitleBG: #dddddd;
 $home_innerArea_ChooseBG: #f3f3f3;
 $home_innerArea_ChooseBG_2: #9e021e;
+$home_innerArea_ChooseBaseBG: #b9b9b9;
+$home_innerArea_ChooseWord: #ffffff;
 $home_innerArea_ClearBG: #393433;
+$home_innerArea_RemindWord: #dd0101;
+
+$home_Single_TitleBG: #9b763f;
+
+$home_Easy_TitleBG: linear-gradient(to top,#644619 0%,#7c5d30 100%);
 
 //marquee
 $marquee_Title: #454545;
 $marquee_BG: #f5f5f5;
 $marquee_Border: #c59248;
 $marquee_Word: #242424;
+
+//scrollbar
+@mixin scrollBar {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #b6b6b6;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #444444;
+        border-radius: 10px;
+    }
+}
 
 
 //button
@@ -89,6 +116,7 @@ $marquee_Word: #242424;
     }
 }
 $whiteBtn_Color2: #0325f2;
+$whiteBtn_Color3: #a00000;
 //彩球按鈕
 @mixin ballBtn {
     background: linear-gradient(to bottom,#ffd617 30%,#c69e00 100%);
@@ -111,6 +139,7 @@ $whiteBtn_Color2: #0325f2;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -151,8 +180,10 @@ $whiteBtn_Color2: #0325f2;
         background: #ffffff;
         border: solid 1px #755316;
         pointer-events: visible;
+        color: #e50000;
     }
 }
+$betInput_ActiveColor: #e50000;
 //fastAreaInput
 @mixin fastInput {
     background: #ffffff;
@@ -162,4 +193,8 @@ $whiteBtn_Color2: #0325f2;
     color: #000000;
     font-size: 14px;
     font-weight: bold;
+
+    &:focus {
+        border: solid 2px #120c00;
+    }
 }
