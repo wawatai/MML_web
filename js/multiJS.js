@@ -231,7 +231,7 @@ $(function(){
     $(".multiWrap li").each(function(){
         name = $(this).index() + 1;
 
-        $(this).find("p")
+        $(this).find(".title p")
         .text(""+ name +"柱");
     })
 

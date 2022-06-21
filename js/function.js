@@ -40,7 +40,7 @@ function clear() {
     $(".easy .leftBox label")
     .removeClass("active");
 
-    $(".easy .rightBox.conti .num p")
+    $(".easy .rightBox.conti .num p,.easy .rightBox.multi .box p")
     .remove();
 }
 

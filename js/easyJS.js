@@ -14,21 +14,48 @@ $(function(){
         {
             $(".easy .rightBox.conti .num")
             .append("<p>"+ (0 + numString) +"</p>");
+
+            $(".easy .rightBox.multi .active .box")
+            .append("<p>"+ (0 + numString) +"</p>");
         }
         else if($(".easy .rightBox.conti p:contains("+ (0 + numString) +")").length)
         {
             $(".easy .rightBox.conti p:contains("+ (0 + numString) +")")
+            .remove();
+
+            $(".easy .rightBox.multi p:contains("+ (0 + numString) +")")
             .remove();
         }
         else if(!$(".easy .rightBox.conti p:contains("+ num +")").length)
         {
             $(".easy .rightBox.conti .num")
             .append("<p>"+ num +"</p>");
+
+            $(".easy .rightBox.multi .active .box")
+            .append("<p>"+ num +"</p>");
         }
         else
         {
             $(".easy .rightBox.conti p:contains("+ num +")")
             .remove();
+
+            $(".easy .rightBox.multi p:contains("+ num +")")
+            .remove();
+        }
+
+        var boxP = $(".easy .rightBox.multi .box").has("p");
+        if($(boxP).closest("li").is(".easy .rightBox.multi li:last-child"))
+        {
+            $(".easy .rightBox.multi ul")
+            .append("<li><div class=title><p></p></div><div class=box></div></li>")
+
+            var name;
+            $(".easy .rightBox.multi li").each(function(){
+                name = $(this).index() + 1;
+
+                $(this).find(".title p")
+                .text(""+ name +"柱");
+            })
         }
     })
 
@@ -55,8 +82,54 @@ $(function(){
         }
     })
 
-    //換柱
+    //轉換柱
     $(".easy .turnMode").click(function(){
-        
+        $(".easy .modeOff")
+        .addClass("display");
+
+        $(".easy .rightBox.multi")
+        .addClass("display")
+        .siblings().removeClass("display");
+
+        $(".easy .rightBox.multi ul")
+            .append("<li><div class=title><p></p></div><div class=box></div></li>")
+
+        var name;
+        $(".easy .rightBox.multi li").each(function(){
+            name = $(this).index() + 1;
+
+            $(this).find(".title p")
+            .text(""+ name +"柱");
+        })
+    })
+    $(document).on("click",".easy .rightBox.multi li",function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+    })
+
+    //柱名轉換
+    var name;
+    $(".easy .rightBox.multi li").each(function(){
+        name = $(this).index() + 1;
+
+        $(this).find(".title p")
+        .text(""+ name +"柱");
+    })
+
+    //刪除柱
+    $(".easy .modeOff").click(function(){
+        $(".easy .rightBox.multi li:last-child")
+        .remove();
+
+        if($(".easy .rightBox.multi li:last-child").is(".easy .rightBox.multi li:first-child") || !$(".easy .rightBox.multi ul").has("li"))
+        {
+            $(".easy .modeOff")
+            .removeClass("display");
+
+            $(".easy .rightBox.conti")
+            .addClass("display")
+            .siblings().removeClass("display");
+        }
     })
 })
