@@ -36,6 +36,12 @@ function clear() {
 
     $(".multiWrap .box p")
     .remove();
+
+    $(".easy .leftBox label")
+    .removeClass("active");
+
+    $(".easy .rightBox.conti .num p")
+    .remove();
 }
 
 export {permutation};

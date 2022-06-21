@@ -78,6 +78,16 @@ $(function(){
         }
     })
 
+    //連柱碰單雙選擇
+    $(".odd").click(function(){
+        $(".multi .ballWrap label:nth-of-type(odd)")
+        .toggleClass("active");
+    })
+    $(".even").click(function(){
+        $(".multi .ballWrap label:nth-of-type(even)")
+        .toggleClass("active");
+    })
+
     //大小選擇
     $(".big").click(function(){
         $(".multi .ballWrap label:gt(18)")
@@ -196,7 +206,12 @@ $(function(){
     })
 
     //換柱
-    $(".multiWrap li").click(function(){
+    // $(".multiWrap li").click(function(){
+    //     $(this)
+    //     .addClass("active")
+    //     .siblings().removeClass("active");
+    // })
+    $(document).on("click",".multiWrap li",function(){
         $(this)
         .addClass("active")
         .siblings().removeClass("active");
@@ -209,5 +224,28 @@ $(function(){
 
         $(".total.multi")
         .attr("value",""+ multiplier * textNum +"");
+    })
+
+    //柱名轉換
+    var name;
+    $(".multiWrap li").each(function(){
+        name = $(this).index() + 1;
+
+        $(this).find("p")
+        .text(""+ name +"柱");
+    })
+
+    //新增一柱
+    $(".multi .newMulti").click(function(){
+        $(".multiWrap ul")
+        .append("<li><div class=title><p></p></div><div class=box></box></li>")
+
+        var name;
+        $(".multiWrap li").each(function(){
+            name = $(this).index() + 1;
+
+            $(this).find(".title p")
+            .text(""+ name +"柱");
+        })
     })
 })

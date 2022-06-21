@@ -40,11 +40,11 @@ $(function(){
 
     //連柱碰單雙選擇
     $(".odd").click(function(){
-        $(".ballWrap label:nth-of-type(odd)")
+        $(".conti .ballWrap label:nth-of-type(odd)")
         .toggleClass("active");
     })
     $(".even").click(function(){
-        $(".ballWrap label:nth-of-type(even)")
+        $(".conti .ballWrap label:nth-of-type(even)")
         .toggleClass("active");
     })
 

@@ -1,5 +1,4 @@
 $(function(){
-
     //切換碰
     $(".mainWrap .top button").click(function(){
         $(this)
@@ -25,6 +24,12 @@ $(function(){
             .siblings().removeClass("display");
         }
 
+        $(".moneyWindow .easyBtn,.common")
+        .addClass("display");
+
+        $(".moneyWindow .contiBtn")
+        .removeClass("display");
+
         clear();
     })
 
@@ -37,10 +42,7 @@ $(function(){
         .addClass("display")
         .siblings().removeClass("display");
 
-        $(".common")
-        .removeClass("display")
-
-        $(".moneyWindow .easyBtn")
+        $(".common,.moneyWindow .easyBtn")
         .removeClass("display");
 
         $(".moneyWindow .contiBtn")

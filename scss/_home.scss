@@ -540,14 +540,15 @@
 
                                 //柱碰
                                 .multiWrap {
-                                    width: 100%;
+                                    width: 475px;
                                     height: 468px;
-                                    overflow-x: auto;
 
                                     ul {
-                                        width: auto;
+                                        width: 100%;
                                         height: 100%;
                                         display: flex;
+                                        overflow-x: auto;
+                                        @include scrollBar;
 
                                         li {
                                             width: 60px;
@@ -555,6 +556,7 @@
                                             background: $home_innerArea_SecondBG;
                                             border-right: solid 1px $mainBorder_1;
                                             cursor: pointer;
+                                            flex-shrink: 0;
 
                                             &:nth-of-type(2n) {
                                                 background: $home_innerArea_BG;
@@ -743,9 +745,27 @@
                                                 height: 30px;
                                                 display: flex;
                                                 background: $home_innerArea_BG;
+                                                border-bottom: solid 1px $home_innerArea_ListBorder;
 
                                                 &:nth-of-type(2n) {
                                                     background: $home_innerArea_SecondBG;
+                                                }
+                                                &:last-child {
+                                                    border: none;
+                                                }
+
+                                                &.smallTitle {
+                                                    height: 28px;
+                                                    border: none;
+                                                    position: sticky;
+                                                    top: 0;
+                                                    z-index: 1;
+
+                                                    p {
+                                                        background: $home_Single_TitleBG;
+                                                        border-color:$mainBorder_1;
+                                                        color: $home_Title;
+                                                    }
                                                 }
 
                                                 p {
@@ -877,10 +897,16 @@
                                                 font-weight: bold;
                                             }
 
-                                            button {
+                                            span {
                                                 width: 35px;
                                                 height: 35px;
                                                 @include ballBtn;
+                                                pointer-events: none;
+                                            }
+
+                                            input {
+                                                position: absolute;
+                                                z-index: -1;
                                             }
                                         }
                                     }
@@ -944,17 +970,20 @@
                                         }
 
                                         &.boxBottom {
-                                            display: none;
-
-                                            &.display {
-                                                display: flex;
-                                            }
                                             
                                             button {
                                                 width: 105px;
                                                 height: 35px;
                                                 @include whiteBtn;
                                                 margin: 0 5px;
+
+                                                &.modeOff {
+                                                    display: none;
+
+                                                    &.display {
+                                                        display: block;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
