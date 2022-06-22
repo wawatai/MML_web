@@ -738,7 +738,7 @@
                                     grid-template-columns: repeat(7,1fr);
                                     grid-gap: 0 10px;
                                     box-sizing: border-box;
-                                    padding: 0 30px;
+                                    padding: 0 20px;
 
                                     li {
                                         width: auto;
@@ -751,9 +751,9 @@
                                         p {
                                             width: 100%;
                                             color: $mainWord_1;
-                                            font-style: 14px;
+                                            font-size: 15px;
                                             font-weight: bold;
-                                            margin-bottom: 8px;
+                                            margin-bottom: 4px;
                                             letter-spacing: 5px;
                                         }
 
@@ -770,7 +770,7 @@
                                     width: 100%;
                                     height: auto;
                                     box-sizing: border-box;
-                                    padding: 10px 30px;
+                                    padding: 10px 20px;
 
                                     //三按鈕
                                     .btnBox {
