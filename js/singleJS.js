@@ -30,10 +30,6 @@ $(function(){
 
         $(".single .topList input")
         .val("");
-
-        var bet = $(".singleWrap .betList li:last-child .betNum").val();
-
-        console.log(bet);
     })
 
     //取消列

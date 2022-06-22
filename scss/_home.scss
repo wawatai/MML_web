@@ -139,7 +139,7 @@
                             justify-content: center;
                             border-bottom: solid 1px $mainBorder_1;
 
-                            div {
+                            .name {
                                 width: 110px;
                                 height: 27px;
                                 background: $home_Account_WordBG;
@@ -150,6 +150,33 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                user-select: none;
+                                position: relative;
+
+                                &:hover,&:active,&.active {
+                                    
+                                    .float {
+                                        transform: scale(1);
+                                    }
+                                }
+
+                                .float {
+                                    position: absolute;
+                                    top: -30px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    width: auto;
+                                    height: auto;
+                                    background: $home_innerArea_ThirdBG;
+                                    border-radius: 5px;
+                                    border: solid 1px $mainBorder_1;
+                                    box-shadow: 1px 2px 5px 0px $home_Shadow;
+                                    padding: 5px 10px;
+                                    transform: scale(0);
+                                    transform-origin: left bottom;
+                                    transition: 0.3s all;
+                                    color: $home_Account_Word_2;
+                                }
                             }
                             
                             i {
@@ -183,13 +210,6 @@
 
                                         .num {
                                             background: $home_innerArea_ThirdBG;
-                                        }
-
-                                        input {
-
-                                            &.total {
-                                                color: $betInput_ActiveColor;
-                                            }
                                         }
                                     }
                                 }
@@ -249,9 +269,14 @@
                                                 width: 88px;
                                                 height: 20px;
                                                 @include betInput;
+
+                                                &.money {
+                                                    color: $betInput_ActiveColor;
+                                                }
                                                 
                                                 &.total {
                                                     display: none;
+                                                    color: $betInput_ActiveColor;
 
                                                     &.display {
                                                         display: block;
@@ -1037,9 +1062,11 @@
                                 }
 
                                 ul {
-                                    width: auto;
+                                    width: 478px;
                                     height: 100%;
                                     display: flex;
+                                    overflow-x: auto;
+                                    @include scrollBar;
 
                                     li {
                                         width: 60px;
@@ -1047,6 +1074,7 @@
                                         background: $home_innerArea_SecondBG;
                                         border-right: solid 1px $mainBorder_1;
                                         cursor: pointer;
+                                        flex-shrink: 0;
 
                                         &:nth-of-type(2n) {
                                             background: $home_innerArea_BG;
@@ -1073,7 +1101,7 @@
 
                                         .box {
                                             width: 100%;
-                                            height: calc(100% - 28px);
+                                            height: 336px;
                                             overflow-y: auto;
                                             @include scrollBar;
 

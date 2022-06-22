@@ -23,6 +23,10 @@ $(function(){
             $(".easy .rightBox.conti p:contains("+ (0 + numString) +")")
             .remove();
 
+            $(".easy .rightBox.multi p:contains("+ (0 + numString) +")").closest("li")
+            .addClass("active")
+            .siblings().removeClass("active");
+
             $(".easy .rightBox.multi p:contains("+ (0 + numString) +")")
             .remove();
         }
@@ -33,11 +37,16 @@ $(function(){
 
             $(".easy .rightBox.multi .active .box")
             .append("<p>"+ num +"</p>");
+            
         }
         else
         {
             $(".easy .rightBox.conti p:contains("+ num +")")
             .remove();
+
+            $(".easy .rightBox.multi p:contains("+ num +")").closest("li")
+            .addClass("active")
+            .siblings().removeClass("active");
 
             $(".easy .rightBox.multi p:contains("+ num +")")
             .remove();
@@ -70,11 +79,28 @@ $(function(){
             {
                 $(".easy .rightBox.conti .num")
                 .append("<p>"+ (0 + valString) +"</p>");
+
+                $(".easy .rightBox.multi .active .box")
+                .append("<p>"+ (0 + valString) +"</p>");
             }
             else if(!$(".easy .rightBox.conti p:contains("+ textVal +")").length)
             {
                 $(".easy .rightBox.conti .num")
                 .append("<p>"+ textVal +"</p>");
+
+                $(".easy .rightBox.multi .active .box")
+                .append("<p>"+ textVal +"</p>");
+            }
+            else if($(".easy .rightBox.conti p:contains("+ (0 + valString) +")").length)
+            {
+                $(".easy .rightBox.multi p:contains("+ (0 + valString) +")").closest("li")
+                .addClass("active")
+                .siblings().removeClass("active");
+            }
+            else {
+                $(".easy .rightBox.multi p:contains("+ textVal +")").closest("li")
+                .addClass("active")
+                .siblings().removeClass("active");
             }
 
             $(".easy .easyInput")
@@ -122,6 +148,9 @@ $(function(){
         $(".easy .rightBox.multi li:last-child")
         .remove();
 
+        $(".easy .rightBox.multi li")
+        .removeClass("active");
+
         if($(".easy .rightBox.multi li:last-child").is(".easy .rightBox.multi li:first-child") || !$(".easy .rightBox.multi ul").has("li"))
         {
             $(".easy .modeOff")
@@ -130,6 +159,25 @@ $(function(){
             $(".easy .rightBox.conti")
             .addClass("display")
             .siblings().removeClass("display");
+
+            $(".easy .rightBox.multi li:first-child")
+            .addClass("active");
         }
+
+        var arr = [];
+        var n = 0;
+
+        $(".easy .rightBox.multi li:last-child .box p").each(function(){
+            arr[n] = $(this).text();
+
+            n ++;
+        })
+
+        arr.forEach(function(val,index,arr){
+            var n = arr[index];
+
+            $(".easy .leftBox span:contains("+ n +")").closest("label")
+            .change();
+        })
     })
 })

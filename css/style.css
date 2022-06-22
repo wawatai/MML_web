@@ -320,7 +320,7 @@ html body .home article .content .mainWrap .mainBox .left .account {
           justify-content: center;
   border-bottom: solid 1px #c59248;
 }
-html body .home article .content .mainWrap .mainBox .left .account div {
+html body .home article .content .mainWrap .mainBox .left .account .name {
   width: 110px;
   height: 27px;
   background: #d9d9d9;
@@ -337,6 +337,37 @@ html body .home article .content .mainWrap .mainBox .left .account div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+}
+html body .home article .content .mainWrap .mainBox .left .account .name:hover .float, html body .home article .content .mainWrap .mainBox .left .account .name:active .float, html body .home article .content .mainWrap .mainBox .left .account .name.active .float {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+html body .home article .content .mainWrap .mainBox .left .account .name .float {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  background: #fbbd00;
+  border-radius: 5px;
+  border: solid 1px #c59248;
+  -webkit-box-shadow: 1px 2px 5px 0px #0000002a;
+          box-shadow: 1px 2px 5px 0px #0000002a;
+  padding: 5px 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  color: #000000;
 }
 html body .home article .content .mainWrap .mainBox .left .account i {
   display: block;
@@ -360,9 +391,6 @@ html body .home article .content .mainWrap .mainBox .left .betArea .betWindow {
 }
 html body .home article .content .mainWrap .mainBox .left .betArea .betWindow.moneyWindow.active .num {
   background: #fbbd00;
-}
-html body .home article .content .mainWrap .mainBox .left .betArea .betWindow.moneyWindow.active input.total {
-  color: #e50000;
 }
 html body .home article .content .mainWrap .mainBox .left .betArea .betWindow .title {
   width: 100%;
@@ -442,10 +470,13 @@ html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul
   background: #ffffff;
   border: solid 1px #755316;
   pointer-events: visible;
+}
+html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p input.money {
   color: #e50000;
 }
 html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p input.total {
   display: none;
+  color: #e50000;
 }
 html body .home article .content .mainWrap .mainBox .left .betArea .betWindow ul li p input.total.display {
   display: block;
@@ -1458,11 +1489,24 @@ html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox .n
           justify-content: center;
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul {
-  width: auto;
+  width: 478px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: auto;
+}
+html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul::-webkit-scrollbar-track {
+  background: #b6b6b6;
+  border-radius: 10px;
+}
+html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 10px;
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul li {
   width: 60px;
@@ -1470,6 +1514,8 @@ html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul
   background: #f7f7f7;
   border-right: solid 1px #c59248;
   cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul li:nth-of-type(2n) {
   background: #ededed;
@@ -1489,7 +1535,7 @@ html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul li .box {
   width: 100%;
-  height: calc(100% - 28px);
+  height: 336px;
   overflow-y: auto;
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul li .box::-webkit-scrollbar {
