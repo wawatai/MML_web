@@ -963,7 +963,7 @@
                                             &:hover,&:active,&.active {
                                                 background: $home_innerArea_ChooseBG_2;
                                                 
-                                                button {
+                                                span {
                                                     background: none;
                                                     color: $home_innerArea_ChooseWord;
                                                 }
@@ -987,8 +987,8 @@
                                             }
 
                                             span {
-                                                width: 35px;
-                                                height: 35px;
+                                                width: 40px;
+                                                height: 40px;
                                                 @include ballBtn;
                                                 pointer-events: none;
                                             }
