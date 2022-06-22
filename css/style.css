@@ -78,6 +78,14 @@ main {
   display: block;
 }
 
+.mainWrap .imgBox li.empty {
+  background: url("../images/num_gray.png") no-repeat;
+}
+
+.mainWrap .imgBox li {
+  background: url("../images/num_gold.png") no-repeat;
+}
+
 header .logo {
   height: 42px;
   -o-object-fit: contain;
@@ -379,6 +387,70 @@ html body .home article .content .mainWrap .mainBox .left .account i {
 html body .home article .content .mainWrap .mainBox .left .imgBox {
   width: 100%;
   height: auto;
+  font-size: 0;
+  position: relative;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox {
+  width: 100%;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 19px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li {
+  width: 22px;
+  height: 100%;
+  margin-left: 4px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li:nth-of-type(3), html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li:nth-of-type(6) {
+  margin-left: 9px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li:nth-of-type(9) {
+  margin-left: 8px;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.one {
+  background-position-y: 10%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.two {
+  background-position-y: 20%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.three {
+  background-position-y: 30%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.four {
+  background-position-y: 40%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.five {
+  background-position-y: 50%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.six {
+  background-position-y: 60%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.seven {
+  background-position-y: 70%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.eight {
+  background-position-y: 80%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.nine {
+  background-position-y: 90%;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.ten {
+  background-position-y: 100%;
 }
 html body .home article .content .mainWrap .mainBox .left .betArea {
   width: 100%;

@@ -192,6 +192,70 @@
                         .imgBox {
                             width: 100%;
                             height: auto;
+                            font-size: 0;
+                            position: relative;
+
+                            .numBox {
+                                width: 100%;
+                                height: 32px;
+                                position: absolute;
+                                left: 0;
+                                bottom: 22px;
+
+                                ul {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: row-reverse;
+                                    box-sizing: border-box;
+                                    padding-right: 19px;
+
+                                    li {
+                                        width: 22px;
+                                        height: 100%;
+                                        margin-left: 4px;
+
+                                        &:nth-of-type(3),
+                                        &:nth-of-type(6) {
+                                            margin-left: 9px;
+                                        }
+                                        &:nth-of-type(9) {
+                                            margin-left: 8px;
+                                        }
+
+                                        &.one {
+                                            background-position-y: 10%;
+                                        }
+                                        &.two {
+                                            background-position-y: 20%;
+                                        }
+                                        &.three {
+                                            background-position-y: 30%;
+                                        }
+                                        &.four {
+                                            background-position-y: 40%;
+                                        }
+                                        &.five {
+                                            background-position-y: 50%;
+                                        }
+                                        &.six {
+                                            background-position-y: 60%;
+                                        }
+                                        &.seven {
+                                            background-position-y: 70%;
+                                        }
+                                        &.eight {
+                                            background-position-y: 80%;
+                                        }
+                                        &.nine {
+                                            background-position-y: 90%;
+                                        }
+                                        &.ten {
+                                            background-position-y: 100%;
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         //投注列
