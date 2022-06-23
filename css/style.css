@@ -1781,8 +1781,21 @@ html body .infoWrap article .content .immediateBox .immInfo .name li:nth-of-type
 }
 html body .infoWrap article .content .immediateBox .immInfo .betBox {
   width: 100%;
-  height: auto;
+  height: 695px;
   margin-bottom: 20px;
+  overflow-y: auto;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scrollbar-thumb {
+  background: #9e021e;
+  border-radius: 10px;
 }
 html body .infoWrap article .content .immediateBox .immInfo .betBox ul {
   width: 100%;

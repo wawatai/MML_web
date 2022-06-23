@@ -78,6 +78,22 @@ $info_immediate_Title: #c59248;
         border-radius: 10px;
     }
 }
+@mixin scrollBar_2 {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #efefef;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #9e021e;
+        border-radius: 10px;
+    }
+}
 
 
 //button

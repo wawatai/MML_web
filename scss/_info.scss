@@ -86,8 +86,10 @@
                     //內容
                     .betBox {
                         width: 100%;
-                        height: auto;
+                        height: 695px;
                         margin-bottom: 20px;
+                        overflow-y: auto;
+                        @include scrollBar_2;
 
                         ul {
                             width: 100%;
