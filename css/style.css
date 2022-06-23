@@ -86,13 +86,41 @@ main {
   background: url("../images/num_gold.png") no-repeat;
 }
 
+.info_BG {
+  background: url("../images/info_BG.png") no-repeat;
+  background-size: cover;
+}
+
+.infoWrap .immInfo .time_ic {
+  background: url("../images/info_timeIC.png") no-repeat;
+  background-size: contain;
+}
+
+.infoWrap .immInfo .arrow_ic,
+.infoWrap .lotteryBox .arrow_ic {
+  background: url("../images/info_dbArrowIC.png") no-repeat;
+  background-size: contain;
+}
+
 header .logo {
   height: 42px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
+header .logo.info {
+  height: 36px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .mainBox .prize {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.infoWrap .info_prize {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -158,6 +186,39 @@ html body header article .topList li p {
   font-weight: bold;
   border-right: solid 1px #e3aa57;
   padding: 0 15px;
+}
+html body header.infoHeader {
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+html body header.infoHeader .topBar {
+  width: 100%;
+  height: 42px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+html body header.infoHeader .logoBox {
+  width: 272px;
+  height: 66px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dadada), to(#ffffff));
+  background: linear-gradient(to top, #dadada 0%, #ffffff 100%);
+  border-radius: 0 0 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
 }
 html body .home {
   width: 100%;
@@ -1631,4 +1692,493 @@ html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul
 }
 html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul li .box p.count {
   display: none;
+}
+html body .infoWrap {
+  width: 100%;
+  height: auto;
+}
+html body .infoWrap article {
+  width: 1300px;
+  height: auto;
+  margin: 0 auto;
+}
+html body .infoWrap article .imgBox {
+  width: 1248px;
+  height: auto;
+  font-size: 0;
+  margin: 0 auto 15px;
+}
+html body .infoWrap article .content {
+  width: 1000px;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 0 10px 2px #0000002a;
+          box-shadow: 0 0 10px 2px #0000002a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+html body .infoWrap article .content .immediateBox {
+  width: 850px;
+  height: auto;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0 0 10px 2px #0000002a inset;
+          box-shadow: 0 0 10px 2px #0000002a inset;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  margin: 0 auto 30px;
+}
+html body .infoWrap article .content .immediateBox .title {
+  width: 100%;
+  height: 45px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .immediateBox .title p {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .immediateBox .immInfo {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 16px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .name {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .infoWrap article .content .immediateBox .immInfo .name li {
+  color: #c59248;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .infoWrap article .content .immediateBox .immInfo .name li:nth-of-type(1), html body .infoWrap article .content .immediateBox .immInfo .name li:nth-of-type(2) {
+  width: 30%;
+}
+html body .infoWrap article .content .immediateBox .immInfo .name li:nth-of-type(3) {
+  width: 40%;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li {
+  width: 100%;
+  height: 65px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 10px 0 #0000002a;
+          box-shadow: 0 2px 10px 0 #0000002a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li:last-child {
+  margin: 0;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div:nth-of-type(1), html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div:nth-of-type(2) {
+  width: 30%;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div:nth-of-type(3) {
+  width: 40%;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div p {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox ul li div span {
+  width: 45px;
+  height: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffd617), to(#c69e00));
+  background: linear-gradient(to bottom, #ffd617 30%, #c69e00 100%);
+  border-radius: 50%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 23px;
+  margin: 0 5px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button {
+  width: auto;
+  min-width: 98px;
+  height: 35px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button:hover, html body .infoWrap article .content .immediateBox .immInfo .btnBox button:active, html body .infoWrap article .content .immediateBox .immInfo .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7b000c), to(#a30220));
+  background: linear-gradient(to bottom, #7b000c 0%, #a30220 100%);
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.time span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffffff;
+  border-radius: 3px;
+  color: #99011c;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.time i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.time span {
+  width: 46px;
+  height: 22px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more {
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to top, #dbc9a7 0%, #ffedbe 100%);
+  border-radius: 5px;
+  border: solid 1px #b5a484;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more:hover, html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more:active, html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more i {
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin-left: 8px;
+}
+html body .infoWrap article .content .lotteryBox {
+  width: 850px;
+  height: auto;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0 0 10px 2px #0000002a inset;
+          box-shadow: 0 0 10px 2px #0000002a inset;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  margin: 0 auto 30px;
+}
+html body .infoWrap article .content .lotteryBox .title {
+  width: 100%;
+  height: 45px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7b000c), to(#a30220));
+  background: linear-gradient(to top, #7b000c 0%, #a30220 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .lotteryBox .title p {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 16px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 2px 10px 0 #0000002a;
+          box-shadow: 0 2px 10px 0 #0000002a;
+  margin-top: 20px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle {
+  width: 100%;
+  height: 45px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
+  background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox {
+  width: 100%;
+  height: auto;
+  border: solid 1px #c59248;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr {
+  width: 100%;
+  height: 65px;
+  border-bottom: solid 1px #c59248;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr:last-child {
+  border: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th {
+  border-right: solid 1px #c59248;
+  vertical-align: middle;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th:last-child {
+  border: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th p {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th p:last-child {
+  margin-top: 5px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td {
+  border-right: solid 1px #c59248;
+  vertical-align: middle;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td:last-child {
+  border: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td p {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td div span {
+  width: 52px;
+  height: 52px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffd617), to(#c69e00));
+  background: linear-gradient(to bottom, #ffd617 30%, #c69e00 100%);
+  border-radius: 50%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 25px;
+  margin: 0 20px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox {
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #0000002a;
+          box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #0000002a;
+  overflow: hidden;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr {
+  width: 100%;
+  height: 40px;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr:last-child td {
+  border-bottom: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr th {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
+  background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
+  border-bottom: solid 1px #c59248;
+  vertical-align: middle;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr th p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #c59248;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td.big {
+  border-bottom: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td:last-child {
+  border-right: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td p {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button {
+  width: 154px;
+  height: 35px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to top, #dbc9a7 0%, #ffedbe 100%);
+  border-radius: 5px;
+  border: solid 1px #b5a484;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25px auto;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button:hover, html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button:active, html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
+  background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button i {
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin-left: 8px;
+}
+html body .infoWrap article .content .bottomWord {
+  width: 100%;
+  color: #454545;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin: 80px 0 30px;
+}
+html body .info_BG {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
 }

@@ -1,3 +1,4 @@
+//累積獎金背景
 .mainWrap .imgBox li.empty {
     background: url('../images/num_gray.png') no-repeat;
 }
@@ -5,6 +6,20 @@
     background: url('../images/num_gold.png') no-repeat;
 }
 
+//info
+.info_BG {
+    background: url('../images/info_BG.png') no-repeat;
+    background-size: cover;
+}
+.infoWrap .immInfo .time_ic {
+    background: url('../images/info_timeIC.png') no-repeat;
+    background-size: contain;
+}
+.infoWrap .immInfo .arrow_ic,
+.infoWrap .lotteryBox .arrow_ic {
+    background: url('../images/info_dbArrowIC.png') no-repeat;
+    background-size: contain;
+}
 
 
 //img
@@ -14,9 +29,17 @@ header .logo {
     height: 42px;
     object-fit: contain;
 }
+header .logo.info {
+    height: 36px;
+    object-fit: contain;
+}
 
 //獎池
 .mainBox .prize {
+    width: 100%;
+    object-fit: contain;
+}
+.infoWrap .info_prize {
     width: 100%;
     object-fit: contain;
 }

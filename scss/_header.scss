@@ -1,5 +1,5 @@
 header {
-    width: 100%;
+    width: 100%; 
     height: 82px;
 
     //article
@@ -17,7 +17,7 @@ header {
             width: 950px;
             height: 45px;
             border-radius: 5px;
-            background: $header_TopList_BG;
+            background: $header_BG;
             display: flex;
             overflow: hidden;
 
@@ -29,17 +29,46 @@ header {
                 cursor: pointer;
 
                 &:hover,&:active,&.active {
-                    background: $header_TopList_Hover;
+                    background: $header_Hover;
                 }
 
                 p {
-                    color: $header_TopList_Word;
+                    color: $header_Word;
                     font-size: 15px;
                     font-weight: bold;
-                    border-right: solid 1px $header_TopList_Border;
+                    border-right: solid 1px $header_Border;
                     padding: 0 15px;
                 }
             }
+        }
+    }
+
+    //info
+    &.infoHeader {
+        height: auto;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        .topBar {
+            width: 100%;
+            height: 42px;
+            background: $header_BG;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .logoBox {
+            width: 272px;
+            height: 66px;
+            background: $header_Info_logoBG;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
         }
     }
 }

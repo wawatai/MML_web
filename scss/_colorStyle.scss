@@ -6,16 +6,19 @@ $mainBorder_1: #c59248;
 
 //主字色
 $mainWord_1: #272727;
+$mainWord_2: #000000;
 
 
 //個別區塊設定
 
 
 //header
-$header_TopList_BG: linear-gradient(to top,#7b000c 0%,#a30220 100%);
-$header_TopList_Hover: linear-gradient(to bottom,#7b000c 0%,#a30220 100%);
-$header_TopList_Word: #ffffff;
-$header_TopList_Border: #e3aa57;
+$header_BG: linear-gradient(to top,#7b000c 0%,#a30220 100%);
+$header_Hover: linear-gradient(to bottom,#7b000c 0%,#a30220 100%);
+$header_Word: #ffffff;
+$header_Border: #e3aa57;
+
+$header_Info_logoBG: linear-gradient(to top,#dadada 0%,#ffffff 100%);
 
 //home
 $home_BG: #e6e6e6;
@@ -27,13 +30,11 @@ $home_Title: #ffffff;
 
 $home_Account_WordBG: #d9d9d9;
 $home_Account_Word: #1c1c1c;
-$home_Account_Word_2: #000000;
 
 $home_innerArea_BG: #ededed;
 $home_innerArea_SecondBG: #f7f7f7;
 $home_innerArea_ThirdBG: #fbbd00;
 $home_innerArea_ListBorder: #888888;
-$home_innerArea_ListWord: #000000;
 $home_innerArea_SmallTitleBG: #dddddd;
 $home_innerArea_ChooseBG: #f3f3f3;
 $home_innerArea_ChooseBG_2: #9e021e;
@@ -51,6 +52,14 @@ $marquee_Title: #454545;
 $marquee_BG: #f5f5f5;
 $marquee_Border: #c59248;
 $marquee_Word: #242424;
+
+//info
+$info_BG: #ffffff;
+$info_innerBG: #f7f7f7;
+$info_Shadow: #0000002a;
+$info_BottomWord: #454545;
+
+$info_immediate_Title: #c59248;
 
 //scrollbar
 @mixin scrollBar {
@@ -114,6 +123,35 @@ $marquee_Word: #242424;
 
     &:hover,&:active,&.active {
         background: linear-gradient(to bottom,#e0e0e0 0%,#ffffff 54%);
+    }
+}
+//虹漸層按鈕
+@mixin redBtn {
+    background: linear-gradient(to top,#7b000c 0%,#a30220 100%);
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#7b000c 0%,#a30220 100%);
+    }
+
+    &.time {
+
+        span {
+            display: flex;
+            background: #ffffff;
+            border-radius: 3px;
+            color: #99011c;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 $whiteBtn_Color2: #0325f2;
