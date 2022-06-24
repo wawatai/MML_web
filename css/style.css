@@ -1786,7 +1786,7 @@ html body .infoWrap article .imgBox ul li.anime_1 {
     background-position-y: 0;
   }
   100% {
-    background-position-y: 70%;
+    background-position-y: 90%;
   }
 }
 @keyframes numMove_1 {
@@ -1794,7 +1794,7 @@ html body .infoWrap article .imgBox ul li.anime_1 {
     background-position-y: 0;
   }
   100% {
-    background-position-y: 70%;
+    background-position-y: 90%;
   }
 }
 html body .infoWrap article .content {
@@ -1873,6 +1873,8 @@ html body .infoWrap article .content .immediateBox .immInfo .betBox {
   height: 695px;
   margin-bottom: 20px;
   overflow-y: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scrollbar {
   width: 6px;
@@ -1885,6 +1887,9 @@ html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scr
 html body .infoWrap article .content .immediateBox .immInfo .betBox::-webkit-scrollbar-thumb {
   background: #9e021e;
   border-radius: 10px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .betBox.active {
+  height: 1200px;
 }
 html body .infoWrap article .content .immediateBox .immInfo .betBox ul {
   width: 100%;
@@ -2026,16 +2031,26 @@ html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more 
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  display: none;
 }
 html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more:hover, html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more:active, html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
   background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more i {
   display: block;
   width: 11px;
   height: 11px;
   margin-left: 8px;
+}
+html body .infoWrap article .content .immediateBox .immInfo .btnBox button.more i.turn {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 html body .infoWrap article .content .lotteryBox {
   width: 850px;
@@ -2073,13 +2088,17 @@ html body .infoWrap article .content .lotteryBox .lottoInfo {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 16px;
+  display: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo.display {
+  display: block;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox {
   width: 100%;
   height: auto;
   -webkit-box-shadow: 0 2px 10px 0 #00000042;
           box-shadow: 0 2px 10px 0 #00000042;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle {
   width: 100%;
@@ -2189,7 +2208,7 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox t
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox {
   width: 100%;
   height: auto;
-  margin-top: 25px;
+  margin-top: 16px;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table {
   width: 100%;
@@ -2242,7 +2261,11 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr t
   font-weight: bold;
   text-align: center;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button {
+html body .infoWrap article .content .lotteryBox .lottoInfo hr {
+  border: solid 1px #dd0101;
+  margin: 32px 0;
+}
+html body .infoWrap article .content .lotteryBox .more {
   width: 154px;
   height: 35px;
   background: -webkit-gradient(linear, left bottom, left top, from(#dbc9a7), to(#ffedbe));
@@ -2252,9 +2275,7 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2263,11 +2284,20 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button {
           justify-content: center;
   margin: 25px auto;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button:hover, html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button:active, html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button.active {
+html body .infoWrap article .content .lotteryBox .more:hover, html body .infoWrap article .content .lotteryBox .more:active, html body .infoWrap article .content .lotteryBox .more.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#dbc9a7), to(#ffedbe));
   background: linear-gradient(to bottom, #dbc9a7 0%, #ffedbe 100%);
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox button i {
+html body .infoWrap article .content .lotteryBox .more.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .infoWrap article .content .lotteryBox .more.close i {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+html body .infoWrap article .content .lotteryBox .more i {
   display: block;
   width: 11px;
   height: 11px;
