@@ -5,6 +5,12 @@
 .mainWrap .imgBox li {
     background: url('../images/num_gold.png') no-repeat;
 }
+.infoWrap .imgBox li.empty {
+    background: url('../images/info_num_trans.png') no-repeat;
+}
+.infoWrap .imgBox li {
+    background: url('../images/info_num_blue.png') no-repeat;
+}
 
 //info
 .info_BG {

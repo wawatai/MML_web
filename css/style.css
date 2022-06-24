@@ -86,6 +86,14 @@ main {
   background: url("../images/num_gold.png") no-repeat;
 }
 
+.infoWrap .imgBox li.empty {
+  background: url("../images/info_num_trans.png") no-repeat;
+}
+
+.infoWrap .imgBox li {
+  background: url("../images/info_num_blue.png") no-repeat;
+}
+
 .info_BG {
   background: url("../images/info_BG.png") no-repeat;
   background-size: cover;
@@ -1710,6 +1718,84 @@ html body .infoWrap article .imgBox {
   height: auto;
   font-size: 0;
   margin: 0 auto 15px;
+  position: relative;
+}
+html body .infoWrap article .imgBox ul {
+  width: 774px;
+  height: 44px;
+  position: absolute;
+  bottom: 106px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding-right: 65px;
+}
+html body .infoWrap article .imgBox ul li {
+  width: 31px;
+  height: 100%;
+  margin-left: 37px;
+}
+html body .infoWrap article .imgBox ul li:nth-of-type(5) {
+  margin-left: 38px;
+}
+html body .infoWrap article .imgBox ul li:last-child {
+  margin: 0;
+}
+html body .infoWrap article .imgBox ul li.empty {
+  background-position-y: 90%;
+}
+html body .infoWrap article .imgBox ul li.num_1 {
+  background-position-y: 0;
+}
+html body .infoWrap article .imgBox ul li.num_2 {
+  background-position-y: 10%;
+}
+html body .infoWrap article .imgBox ul li.num_3 {
+  background-position-y: 20%;
+}
+html body .infoWrap article .imgBox ul li.num_4 {
+  background-position-y: 30%;
+}
+html body .infoWrap article .imgBox ul li.num_5 {
+  background-position-y: 40%;
+}
+html body .infoWrap article .imgBox ul li.num_6 {
+  background-position-y: 50%;
+}
+html body .infoWrap article .imgBox ul li.num_7 {
+  background-position-y: 60%;
+}
+html body .infoWrap article .imgBox ul li.num_8 {
+  background-position-y: 70%;
+}
+html body .infoWrap article .imgBox ul li.num_9 {
+  background-position-y: 80%;
+}
+html body .infoWrap article .imgBox ul li.anime_1 {
+  animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
+}
+@-webkit-keyframes numMove_1 {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 70%;
+  }
+}
+@keyframes numMove_1 {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 70%;
+  }
 }
 html body .infoWrap article .content {
   width: 1000px;
