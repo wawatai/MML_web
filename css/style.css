@@ -189,8 +189,9 @@ html body header article .topList li p {
 }
 html body header.infoHeader {
   height: auto;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
 }
 html body header.infoHeader .topBar {
@@ -219,6 +220,7 @@ html body header.infoHeader .logoBox {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 html body .home {
   width: 100%;
@@ -1696,6 +1698,7 @@ html body .home article .content .mainWrap .mainBox .right .easyBox .rightBox ul
 html body .infoWrap {
   width: 100%;
   height: auto;
+  padding-top: 66px;
 }
 html body .infoWrap article {
   width: 1300px;
@@ -1713,8 +1716,8 @@ html body .infoWrap article .content {
   height: auto;
   background: #ffffff;
   border-radius: 10px 10px 0 0;
-  -webkit-box-shadow: 0 0 10px 2px #0000002a;
-          box-shadow: 0 0 10px 2px #0000002a;
+  -webkit-box-shadow: 0 0 10px 2px #00000042;
+          box-shadow: 0 0 10px 2px #00000042;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 0;
@@ -1724,8 +1727,8 @@ html body .infoWrap article .content .immediateBox {
   width: 850px;
   height: auto;
   background: #f7f7f7;
-  -webkit-box-shadow: 0 0 10px 2px #0000002a inset;
-          box-shadow: 0 0 10px 2px #0000002a inset;
+  -webkit-box-shadow: 0 0 10px 2px #00000042 inset;
+          box-shadow: 0 0 10px 2px #00000042 inset;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   margin: 0 auto 30px;
@@ -1803,10 +1806,10 @@ html body .infoWrap article .content .immediateBox .immInfo .betBox ul {
 }
 html body .infoWrap article .content .immediateBox .immInfo .betBox ul li {
   width: 100%;
-  height: 65px;
+  height: 58px;
   background: #ffffff;
-  -webkit-box-shadow: 0 2px 10px 0 #0000002a;
-          box-shadow: 0 2px 10px 0 #0000002a;
+  -webkit-box-shadow: 0 1px 3px 0 #00000042;
+          box-shadow: 0 1px 3px 0 #00000042;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1952,8 +1955,8 @@ html body .infoWrap article .content .lotteryBox {
   width: 850px;
   height: auto;
   background: #f7f7f7;
-  -webkit-box-shadow: 0 0 10px 2px #0000002a inset;
-          box-shadow: 0 0 10px 2px #0000002a inset;
+  -webkit-box-shadow: 0 0 10px 2px #00000042 inset;
+          box-shadow: 0 0 10px 2px #00000042 inset;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   margin: 0 auto 30px;
@@ -1988,8 +1991,8 @@ html body .infoWrap article .content .lotteryBox .lottoInfo {
 html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox {
   width: 100%;
   height: auto;
-  -webkit-box-shadow: 0 2px 10px 0 #0000002a;
-          box-shadow: 0 2px 10px 0 #0000002a;
+  -webkit-box-shadow: 0 2px 10px 0 #00000042;
+          box-shadow: 0 2px 10px 0 #00000042;
   margin-top: 20px;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle {
@@ -2106,8 +2109,8 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #0000002a;
-          box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #0000002a;
+  -webkit-box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #00000042;
+          box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #00000042;
   overflow: hidden;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr {
@@ -2129,6 +2132,7 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr t
   font-weight: bold;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td {
+  width: 12%;
   border-style: solid;
   border-width: 0 1px 1px 0;
   border-color: #c59248;
@@ -2137,14 +2141,18 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr t
   vertical-align: middle;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td.big {
+  width: 18%;
   border-bottom: none;
+}
+html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td.word {
+  width: 16%;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td:last-child {
   border-right: none;
 }
 html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td p {
   color: #000000;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   text-align: center;
 }

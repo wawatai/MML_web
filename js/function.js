@@ -44,5 +44,30 @@ function clear() {
     .remove();
 }
 
+var time = 15;
+function setTime() {
+    $(".infoWrap .immInfo .time span")
+    .text(""+ time +"");
+    
+    if(time >= 0)
+    {
+        setTimeout(function(){
+            time --;
+            
+            setTime();
+        },1000);
+    }
+    else
+    {
+        time = 15;
+
+        $(".infoWrap .immInfo .time span")
+        .text(""+ time +"");
+
+        setTime();
+    }
+}
+
 export {permutation};
 export {clear};
+export {setTime};

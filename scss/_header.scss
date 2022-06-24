@@ -46,8 +46,9 @@ header {
     //info
     &.infoHeader {
         height: auto;
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
         z-index: 10;
 
         .topBar {
@@ -69,6 +70,7 @@ header {
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            cursor: pointer;
         }
     }
 }
