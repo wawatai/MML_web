@@ -78,6 +78,8 @@ $info_immediate_Title: #c59248;
         background: #444444;
         border-radius: 10px;
     }
+
+    overscroll-behavior: contain;
 }
 @mixin scrollBar_2 {
     &::-webkit-scrollbar {
@@ -94,6 +96,8 @@ $info_immediate_Title: #c59248;
         background: #9e021e;
         border-radius: 10px;
     }
+
+    overscroll-behavior: contain;
 }
 
 
