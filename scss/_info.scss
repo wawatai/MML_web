@@ -297,186 +297,199 @@
                     }
                 }
 
-                //資訊欄
-                .lottoInfo {
+                .outerBox {
                     width: 100%;
-                    height: auto;
-                    box-sizing: border-box;
-                    padding: 0 16px;
-                    display: none;
+                    height: 378px;
+                    transition: 0.3s all;
+                    @include scrollBar_2;
 
-                    &.display {
-                        display: block;
+                    &.active {
+                        height: 800px;
+                        padding-bottom: 10px;
+                        overflow-y: auto;
                     }
 
-                    //開獎列
-                    .ballBox {
+                    //資訊欄
+                    .lottoInfo {
                         width: 100%;
                         height: auto;
-                        box-shadow: 0 2px 10px 0 $info_Shadow;
-                        margin-top: 16px;
+                        box-sizing: border-box;
+                        padding: 0 16px;
+                        display: none;
 
-                        .smallTitle {
+                        &.display {
+                            display: block;
+                        }
+
+                        //開獎列
+                        .ballBox {
                             width: 100%;
-                            height: 45px;
-                            background: $home_TitleBG;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-        
-                            p {
-                                color: $home_Title;
-                                font-size: 20px;
-                                font-weight: bold;
+                            height: auto;
+                            box-shadow: 0 2px 10px 0 $info_Shadow;
+                            margin-top: 16px;
+
+                            .smallTitle {
+                                width: 100%;
+                                height: 45px;
+                                background: $home_TitleBG;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+            
+                                p {
+                                    color: $home_Title;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                }
+                            }
+
+                            //主內容
+                            .lottoBox {
+                                width: 100%;
+                                height: auto;
+                                border: solid 1px $mainBorder_1;
+
+                                table {
+                                    width: 100%;
+                                    height: auto;
+                                    background: $info_BG;
+
+                                    tr {
+                                        width: 100%;
+                                        height: 65px;
+                                        border-bottom: solid 1px $mainBorder_1;
+
+                                        &:last-child {
+                                            border: none;
+                                        }
+
+                                        th {
+                                            border-right: solid 1px $mainBorder_1;
+                                            vertical-align: middle;
+
+                                            &:last-child {
+                                                border: none;
+                                            }
+
+                                            p {
+                                                color: $mainWord_2;
+                                                font-size: 18px;
+                                                font-weight: bold;
+
+                                                &:last-child {
+                                                    margin-top: 5px;
+                                                }
+                                            }
+                                        }
+
+                                        td {
+                                            border-right: solid 1px $mainBorder_1;
+                                            vertical-align: middle;
+
+                                            &:last-child {
+                                                border: none;
+                                            }
+
+                                            p {
+                                                color: $mainWord_2;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                                text-align: center;
+                                            }
+
+                                            div {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+
+                                                span {
+                                                    width: 52px;
+                                                    height: 52px;
+                                                    @include ballBtn;
+                                                    font-size: 25px;
+                                                    margin: 0 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
 
-                        //主內容
-                        .lottoBox {
+                        //獎金列
+                        .pointBox {
                             width: 100%;
                             height: auto;
-                            border: solid 1px $mainBorder_1;
+                            margin-top: 16px;
 
                             table {
                                 width: 100%;
                                 height: auto;
                                 background: $info_BG;
+                                box-shadow: 0 0 0 1px $mainBorder_1,0 2px 10px 0 $info_Shadow;
+                                overflow: hidden;
 
                                 tr {
                                     width: 100%;
-                                    height: 65px;
-                                    border-bottom: solid 1px $mainBorder_1;
+                                    height: 40px;
 
                                     &:last-child {
-                                        border: none;
+
+                                        td {
+                                            border-bottom: none;
+                                        }
                                     }
 
                                     th {
-                                        border-right: solid 1px $mainBorder_1;
+                                        background: $home_TitleBG;
+                                        border-bottom: solid 1px $mainBorder_1;
                                         vertical-align: middle;
 
-                                        &:last-child {
-                                            border: none;
-                                        }
-
                                         p {
-                                            color: $mainWord_2;
-                                            font-size: 18px;
+                                            color: $home_Title;
+                                            font-size: 20px;
                                             font-weight: bold;
-
-                                            &:last-child {
-                                                margin-top: 5px;
-                                            }
                                         }
                                     }
 
                                     td {
-                                        border-right: solid 1px $mainBorder_1;
+                                        width: 12%;
+                                        border-style: solid;
+                                        border-width: 0 1px 1px 0;
+                                        border-color: $mainBorder_1;
+                                        box-sizing: border-box;
                                         vertical-align: middle;
 
+                                        &.big {
+                                            width: 18%;
+                                            border-bottom: none;
+                                        }
+                                        &.word {
+                                            width: 16%;
+                                        }
+
                                         &:last-child {
-                                            border: none;
+                                            border-right: none;
                                         }
 
                                         p {
                                             color: $mainWord_2;
-                                            font-size: 18px;
+                                            font-size: 17px;
                                             font-weight: bold;
                                             text-align: center;
                                         }
-
-                                        div {
-                                            width: 100%;
-                                            height: 100%;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-
-                                            span {
-                                                width: 52px;
-                                                height: 52px;
-                                                @include ballBtn;
-                                                font-size: 25px;
-                                                margin: 0 20px;
-                                            }
-                                        }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    //獎金列
-                    .pointBox {
-                        width: 100%;
-                        height: auto;
-                        margin-top: 16px;
-
-                        table {
-                            width: 100%;
-                            height: auto;
-                            background: $info_BG;
-                            box-shadow: 0 0 0 1px $mainBorder_1,0 2px 10px 0 $info_Shadow;
-                            overflow: hidden;
-
-                            tr {
-                                width: 100%;
-                                height: 40px;
-
-                                &:last-child {
-
-                                    td {
-                                        border-bottom: none;
-                                    }
-                                }
-
-                                th {
-                                    background: $home_TitleBG;
-                                    border-bottom: solid 1px $mainBorder_1;
-                                    vertical-align: middle;
-
-                                    p {
-                                        color: $home_Title;
-                                        font-size: 20px;
-                                        font-weight: bold;
-                                    }
-                                }
-
-                                td {
-                                    width: 12%;
-                                    border-style: solid;
-                                    border-width: 0 1px 1px 0;
-                                    border-color: $mainBorder_1;
-                                    box-sizing: border-box;
-                                    vertical-align: middle;
-
-                                    &.big {
-                                        width: 18%;
-                                        border-bottom: none;
-                                    }
-                                    &.word {
-                                        width: 16%;
-                                    }
-
-                                    &:last-child {
-                                        border-right: none;
-                                    }
-
-                                    p {
-                                        color: $mainWord_2;
-                                        font-size: 17px;
-                                        font-weight: bold;
-                                        text-align: center;
-                                    }
-                                }
-                            }
+                        //分隔線
+                        hr {
+                            border: solid 1px $info_Separate;
+                            margin: 32px 0;
                         }
-                    }
-
-                    //分隔線
-                    hr {
-                        border: solid 1px $info_Separate;
-                        margin: 32px 0;
                     }
                 }
 

@@ -2082,7 +2082,30 @@ html body .infoWrap article .content .lotteryBox .title p {
   font-size: 23px;
   font-weight: bold;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo {
+html body .infoWrap article .content .lotteryBox .outerBox {
+  width: 100%;
+  height: 378px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+html body .infoWrap article .content .lotteryBox .outerBox::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+html body .infoWrap article .content .lotteryBox .outerBox::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html body .infoWrap article .content .lotteryBox .outerBox::-webkit-scrollbar-thumb {
+  background: #9e021e;
+  border-radius: 10px;
+}
+html body .infoWrap article .content .lotteryBox .outerBox.active {
+  height: 800px;
+  padding-bottom: 10px;
+  overflow-y: auto;
+}
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo {
   width: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -2090,17 +2113,17 @@ html body .infoWrap article .content .lotteryBox .lottoInfo {
   padding: 0 16px;
   display: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo.display {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo.display {
   display: block;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox {
   width: 100%;
   height: auto;
   -webkit-box-shadow: 0 2px 10px 0 #00000042;
           box-shadow: 0 2px 10px 0 #00000042;
   margin-top: 16px;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .smallTitle {
   width: 100%;
   height: 45px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
@@ -2115,58 +2138,58 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle
       -ms-flex-pack: center;
           justify-content: center;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .smallTitle p {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .smallTitle p {
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox {
   width: 100%;
   height: auto;
   border: solid 1px #c59248;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table {
   width: 100%;
   height: auto;
   background: #ffffff;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr {
   width: 100%;
   height: 65px;
   border-bottom: solid 1px #c59248;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr:last-child {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr:last-child {
   border: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr th {
   border-right: solid 1px #c59248;
   vertical-align: middle;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th:last-child {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr th:last-child {
   border: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th p {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr th p {
   color: #000000;
   font-size: 18px;
   font-weight: bold;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr th p:last-child {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr th p:last-child {
   margin-top: 5px;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr td {
   border-right: solid 1px #c59248;
   vertical-align: middle;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td:last-child {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr td:last-child {
   border: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td p {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr td p {
   color: #000000;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td div {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr td div {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -2179,7 +2202,7 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox t
       -ms-flex-pack: center;
           justify-content: center;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox table tr td div span {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .ballBox .lottoBox table tr td div span {
   width: 52px;
   height: 52px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffd617), to(#c69e00));
@@ -2205,12 +2228,12 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .ballBox .lottoBox t
   font-size: 25px;
   margin: 0 20px;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox {
   width: 100%;
   height: auto;
   margin-top: 16px;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table {
   width: 100%;
   height: auto;
   background: #ffffff;
@@ -2218,25 +2241,25 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table {
           box-shadow: 0 0 0 1px #c59248, 0 2px 10px 0 #00000042;
   overflow: hidden;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr {
   width: 100%;
   height: 40px;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr:last-child td {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr:last-child td {
   border-bottom: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr th {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr th {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(6%, #9e7b48), to(#d2ae69));
   background: linear-gradient(to top, #9e7b48 6%, #d2ae69 100%);
   border-bottom: solid 1px #c59248;
   vertical-align: middle;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr th p {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr th p {
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr td {
   width: 12%;
   border-style: solid;
   border-width: 0 1px 1px 0;
@@ -2245,23 +2268,23 @@ html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr t
           box-sizing: border-box;
   vertical-align: middle;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td.big {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr td.big {
   width: 18%;
   border-bottom: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td.word {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr td.word {
   width: 16%;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td:last-child {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr td:last-child {
   border-right: none;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo .pointBox table tr td p {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo .pointBox table tr td p {
   color: #000000;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
 }
-html body .infoWrap article .content .lotteryBox .lottoInfo hr {
+html body .infoWrap article .content .lotteryBox .outerBox .lottoInfo hr {
   border: solid 1px #dd0101;
   margin: 32px 0;
 }

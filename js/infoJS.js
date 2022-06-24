@@ -23,12 +23,18 @@ $(function(){
         {
             $(".infoWrap .lotteryBox .lottoInfo")
             .addClass("display");
+
+            $(".infoWrap .lotteryBox .outerBox")
+            .addClass("active");
         }
         else if($(this).hasClass("close"))
         {
             $(".infoWrap .lotteryBox .lottoInfo:eq(0)")
             .addClass("display")
             .siblings(".lottoInfo").removeClass("display");
+
+            $(".infoWrap .lotteryBox .outerBox")
+            .removeClass("active");
         }
     })
 })
