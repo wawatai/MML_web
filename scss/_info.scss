@@ -2,92 +2,14 @@
 .infoWrap {
     width: 100%;
     height: auto;
-    padding-top: 66px;
+    padding-top: 391px;
 
     //article
     article {
-        width: 1300px;
+        width: 1000px;
         height: auto;
         margin: 0 auto;
-
-        //獎池圖
-        .imgBox {
-            width: 1248px;
-            height: auto;
-            font-size: 0;
-            margin: 0 auto 15px;
-            position: relative;
-
-            ul {
-              width: 774px;
-              height: 44px;
-              position: absolute;
-              bottom: 106px;
-              left: 50%;
-              transform: translateX(-50%);
-              display: flex;
-              flex-direction: row-reverse;
-              padding-right: 65px;
-
-              li {
-                width: 31px;
-                height: 100%;
-                margin-left: 37px;
-
-                &:nth-of-type(5) {
-                    margin-left: 38px;
-                }
-                &:last-child {
-                    margin: 0;
-                }
-
-                &.empty {
-                    background-position-y: 90%;
-                }
-                &.num_1 {
-                    background-position-y: 0;
-                }
-                &.num_2 {
-                    background-position-y: 10%;
-                }
-                &.num_3 {
-                    background-position-y: 20%;
-                }
-                &.num_4 {
-                    background-position-y: 30%;
-                }
-                &.num_5 {
-                    background-position-y: 40%;
-                }
-                &.num_6 {
-                    background-position-y: 50%;
-                }
-                &.num_7 {
-                    background-position-y: 60%;
-                }
-                &.num_8 {
-                    background-position-y: 70%;
-                }
-                &.num_9 {
-                    background-position-y: 80%;
-                }
-
-                &.anime_1 {
-                    animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
-                }
-
-                @keyframes numMove_1 {
-                    0% {
-                        background-position-y: 0;
-                    }
-
-                    100% {
-                        background-position-y: 90%;
-                    }
-                }
-              }
-            }
-        }
+        position: relative;
 
         //內容
         .content {
@@ -223,6 +145,7 @@
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: 20px;
+                        position: relative;
 
                         button {
                             width: auto;
@@ -539,9 +462,91 @@
 //背景
 .info_BG {
     width: 100%;
+    min-width: 1000px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: -999;
+
+    //獎池圖
+    .imgBox {
+        width: 1248px;
+        height: 315px;
+        font-size: 0;
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        ul {
+          width: 774px;
+          height: 44px;
+          position: absolute;
+          bottom: 106px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: row-reverse;
+          padding-right: 65px;
+
+          li {
+            width: 31px;
+            height: 100%;
+            margin-left: 37px;
+
+            &:nth-of-type(5) {
+                margin-left: 38px;
+            }
+            &:last-child {
+                margin: 0;
+            }
+
+            &.empty {
+                background-position-y: 90%;
+            }
+            &.num_1 {
+                background-position-y: 0;
+            }
+            &.num_2 {
+                background-position-y: 10%;
+            }
+            &.num_3 {
+                background-position-y: 20%;
+            }
+            &.num_4 {
+                background-position-y: 30%;
+            }
+            &.num_5 {
+                background-position-y: 40%;
+            }
+            &.num_6 {
+                background-position-y: 50%;
+            }
+            &.num_7 {
+                background-position-y: 60%;
+            }
+            &.num_8 {
+                background-position-y: 70%;
+            }
+            &.num_9 {
+                background-position-y: 80%;
+            }
+
+            &.anime_1 {
+                animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
+            }
+
+            @keyframes numMove_1 {
+                0% {
+                    background-position-y: 0;
+                }
+
+                100% {
+                    background-position-y: 90%;
+                }
+            }
+          }
+        }
+    }
 }

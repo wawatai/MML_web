@@ -45,6 +45,7 @@ header {
 
     //info
     &.infoHeader {
+        min-width: 1000px;
         height: auto;
         position: fixed;
         top: 0;
@@ -63,7 +64,7 @@ header {
 
         .logoBox {
             width: 272px;
-            height: 66px;
+            height: 56px;
             background: $header_Info_logoBG;
             border-radius: 0 0 10px 10px;
             display: flex;

@@ -5,16 +5,20 @@
 .mainWrap .imgBox li {
     background: url('../images/num_gold.png') no-repeat;
 }
-.infoWrap .imgBox li.empty {
+.info_BG .imgBox {
+    background: url('../images/info_prize.png') no-repeat top center;
+    background-size: contain;
+}
+.info_BG .imgBox li.empty {
     background: url('../images/info_num_trans.png') no-repeat;
 }
-.infoWrap .imgBox li {
+.info_BG .imgBox li {
     background: url('../images/info_num_blue.png') no-repeat;
 }
 
 //info
 .info_BG {
-    background: url('../images/info_BG.png') no-repeat;
+    background: url('../images/info_BG.png') no-repeat top center;
     background-size: cover;
 }
 .infoWrap .immInfo .time_ic {
@@ -42,10 +46,6 @@ header .logo.info {
 
 //獎池
 .mainBox .prize {
-    width: 100%;
-    object-fit: contain;
-}
-.infoWrap .info_prize {
     width: 100%;
     object-fit: contain;
 }
