@@ -78,6 +78,10 @@ main {
   display: block;
 }
 
+.mainWrap .imgBox {
+  background: url("../images/prize.gif") no-repeat;
+}
+
 .mainWrap .imgBox li.empty {
   background: url("../images/num_gray.png") no-repeat;
 }
@@ -123,12 +127,6 @@ header .logo {
 
 header .logo.info {
   height: 36px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.mainBox .prize {
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -457,7 +455,7 @@ html body .home article .content .mainWrap .mainBox .left .account i {
 }
 html body .home article .content .mainWrap .mainBox .left .imgBox {
   width: 100%;
-  height: auto;
+  height: 143px;
   font-size: 0;
   position: relative;
 }

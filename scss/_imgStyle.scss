@@ -1,4 +1,7 @@
 //累積獎金背景
+.mainWrap .imgBox {
+    background: url('../images/prize.gif') no-repeat;
+}
 .mainWrap .imgBox li.empty {
     background: url('../images/num_gray.png') no-repeat;
 }
@@ -41,11 +44,5 @@ header .logo {
 }
 header .logo.info {
     height: 36px;
-    object-fit: contain;
-}
-
-//獎池
-.mainBox .prize {
-    width: 100%;
     object-fit: contain;
 }
