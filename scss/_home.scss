@@ -253,6 +253,39 @@
                                         &.ten {
                                             background-position-y: 100%;
                                         }
+
+                                        &.anime_1 {
+                                            animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
+
+                                            &.delay {
+                                                animation-delay: 0.5s;
+                                            }
+                                        }
+                                        &.anime_2 {
+                                            animation: numMove_2 2s ease-in-out 0s alternate-reverse infinite;
+                                        }
+                                        &.anime_3 {
+                                            animation: numMove_2 2.5s ease-in-out 0s alternate-reverse infinite;
+                                        }
+                            
+                                        @keyframes numMove_1 {
+                                            0% {
+                                                background-position-y: 0;
+                                            }
+                            
+                                            100% {
+                                                background-position-y: 90%;
+                                            }
+                                        }
+                                        @keyframes numMove_2 {
+                                            0% {
+                                                background-position-y: 90%;
+                                            }
+                            
+                                            100% {
+                                                background-position-y: 0;
+                                            }
+                                        }
                                     }
                                 }
                             }

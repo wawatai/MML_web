@@ -551,6 +551,51 @@ html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.
 html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.ten {
   background-position-y: 100%;
 }
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.anime_1 {
+  animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.anime_1.delay {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.anime_2 {
+  animation: numMove_2 2s ease-in-out 0s alternate-reverse infinite;
+}
+html body .home article .content .mainWrap .mainBox .left .imgBox .numBox ul li.anime_3 {
+  animation: numMove_2 2.5s ease-in-out 0s alternate-reverse infinite;
+}
+@-webkit-keyframes numMove_1 {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 90%;
+  }
+}
+@keyframes numMove_1 {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 90%;
+  }
+}
+@-webkit-keyframes numMove_2 {
+  0% {
+    background-position-y: 90%;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
+@keyframes numMove_2 {
+  0% {
+    background-position-y: 90%;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
 html body .home article .content .mainWrap .mainBox .left .betArea {
   width: 100%;
   height: auto;
@@ -2373,14 +2418,6 @@ html body .info_BG .imgBox ul li.num_9 {
 }
 html body .info_BG .imgBox ul li.anime_1 {
   animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
-}
-@-webkit-keyframes numMove_1 {
-  0% {
-    background-position-y: 0;
-  }
-  100% {
-    background-position-y: 90%;
-  }
 }
 @keyframes numMove_1 {
   0% {
